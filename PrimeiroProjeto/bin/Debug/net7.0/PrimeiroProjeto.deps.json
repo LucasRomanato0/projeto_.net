@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "PrimeiroProjeto/1.0.0": {
+        "dependencies": {
+          "FluentColorConsole": "2.0.1"
+        },
+        "runtime": {
+          "PrimeiroProjeto.dll": {}
+        }
+      },
+      "FluentColorConsole/2.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/FluentColorConsole.dll": {
+            "assemblyVersion": "2.0.0.1",
+            "fileVersion": "2.0.0.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PrimeiroProjeto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FluentColorConsole/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-beOQn9r0EEDvhvt1nKzUFFlDNPQ13qgdxLpIG21Ewn/8HmyWa4sM8DJcZ7ish17ZEnQJUs9IHvkb29BowUEsuQ==",
+      "path": "fluentcolorconsole/2.0.1",
+      "hashPath": "fluentcolorconsole.2.0.1.nupkg.sha512"
+    }
+  }
+}

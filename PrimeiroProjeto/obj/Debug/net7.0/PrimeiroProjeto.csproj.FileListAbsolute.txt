@@ -1,0 +1,17 @@
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\bin\Debug\net7.0\PrimeiroProjeto.exe
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\bin\Debug\net7.0\PrimeiroProjeto.deps.json
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\bin\Debug\net7.0\PrimeiroProjeto.runtimeconfig.json
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\bin\Debug\net7.0\PrimeiroProjeto.dll
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\bin\Debug\net7.0\PrimeiroProjeto.pdb
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.csproj.AssemblyReference.cache
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.AssemblyInfoInputs.cache
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.AssemblyInfo.cs
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.csproj.CoreCompileInputs.cache
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.dll
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\refint\PrimeiroProjeto.dll
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.pdb
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.genruntimeconfig.cache
+c:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\ref\PrimeiroProjeto.dll
+C:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\bin\Debug\net7.0\FluentColorConsole.dll
+C:\Users\lucas\Desktop\dotnet\PrimeiroProjeto\obj\Debug\net7.0\PrimeiroProjeto.csproj.CopyComplete

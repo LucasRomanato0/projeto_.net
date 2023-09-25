@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xjQXMjiOpUhOyeSjp/qJ+KYDhiwPZNGcLXMpXUoLssvKP5z6cJrTzgsyzEbm5Ztea3DVwKK7hnO9ahm9gNbdIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lucas\\Desktop\\dotnet\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucas\\.nuget\\packages\\fluentcolorconsole\\2.0.1\\fluentcolorconsole.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
