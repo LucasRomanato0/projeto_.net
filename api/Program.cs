@@ -3,49 +3,32 @@ using Microsoft.AspNetCore.Mvc;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World 2!");
-app.MapPost("/", () => new { Name = "Lucas Romanato", Age = 22 });
-app.MapGet("/AddHeader", (HttpResponse response) =>
-{
-    response.Headers.Add("Teste", "Lucas Romanato");
-    return new { Name = "Lucas Romanato", Age = 22 };
-});
-
 app.MapPost("/products", (Product product) =>
 {
     ProductRepository.Add(product);
+    return Results.Created($"/products/{product.Code}", product.Code);
 });
 
-//api.app.com/user/{code}
 app.MapGet("/products/{code}", ([FromRoute] string code) =>
 {
     var product = ProductRepository.GetBy(code);
-    return product;
+    if (product != null)
+        return Results.Ok(product);
+    return Results.NotFound();
 });
 
 app.MapPut("/products", (Product product) =>
 {
     var productSave = ProductRepository.GetBy(product.Code);
     productSave.Name = product.Name;
+    return Results.Ok();
 });
 
 app.MapDelete("/products/{code}", ([FromRoute] string code) =>
 {
     var productSave = ProductRepository.GetBy(code);
     ProductRepository.Remove(productSave);
-});
-
-/*
-//api.app.com/users?datestart={date}&dateend={date}
-app.MapGet("/getproduct", ([FromQuery] string dateStart, [FromQuery] string dateEnd) =>
-{
-    return dateStart + " - " + dateEnd;
-});
-*/
-
-app.MapGet("/getproductheader", (HttpRequest req) =>
-{
-    return req.Headers["product-code"].ToString();
+    return Results.Ok();
 });
 
 app.Run();
