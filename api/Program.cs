@@ -29,6 +29,12 @@ app.MapPut("/editproduct", (Product product) =>
     productSave.Name = product.Name;
 });
 
+app.MapDelete("/deleteproduct/{code}", ([FromRoute] string code) =>
+{
+    var productSave = ProductRepository.GetBy(code);
+    ProductRepository.Remove(productSave);
+});
+
 /*
 //api.app.com/users?datestart={date}&dateend={date}
 app.MapGet("/getproduct", ([FromQuery] string dateStart, [FromQuery] string dateEnd) =>
@@ -59,6 +65,11 @@ public static class ProductRepository
     public static Product GetBy(string code)
     {
         return Products.FirstOrDefault(p => p.Code == code); //retorna null se nao achar nada
+    }
+
+    public static void Remove(Product product)
+    {
+        Products.Remove(product);
     }
 }
 
