@@ -34,6 +34,24 @@ app.MapGet("/getproductheader", (HttpRequest req) =>
 
 app.Run();
 
+public static class ProductRepository
+{
+    public static List<Product> Products { get; set; }
+
+    public static void Add(Product product)
+    {
+        if (Products == null)
+            Products = new List<Product>();
+
+        Products.Add(product);
+    }
+
+    public static Product GetBy(string code)
+    {
+        return Products.First(p => p.Code == code);
+    }
+}
+
 public class Product
 {
     public string Code { get; set; }
