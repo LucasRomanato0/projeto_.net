@@ -23,6 +23,12 @@ app.MapGet("/getproduct/{code}", ([FromRoute] string code) =>
     return product;
 });
 
+app.MapPut("/editproduct", (Product product) =>
+{
+    var productSave = ProductRepository.GetBy(product.Code);
+    productSave.Name = product.Name;
+});
+
 /*
 //api.app.com/users?datestart={date}&dateend={date}
 app.MapGet("/getproduct", ([FromQuery] string dateStart, [FromQuery] string dateEnd) =>
