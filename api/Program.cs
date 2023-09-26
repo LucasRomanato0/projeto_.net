@@ -11,25 +11,25 @@ app.MapGet("/AddHeader", (HttpResponse response) =>
     return new { Name = "Lucas Romanato", Age = 22 };
 });
 
-app.MapPost("/saveproduct", (Product product) =>
+app.MapPost("/products", (Product product) =>
 {
     ProductRepository.Add(product);
 });
 
 //api.app.com/user/{code}
-app.MapGet("/getproduct/{code}", ([FromRoute] string code) =>
+app.MapGet("/products/{code}", ([FromRoute] string code) =>
 {
     var product = ProductRepository.GetBy(code);
     return product;
 });
 
-app.MapPut("/editproduct", (Product product) =>
+app.MapPut("/products", (Product product) =>
 {
     var productSave = ProductRepository.GetBy(product.Code);
     productSave.Name = product.Name;
 });
 
-app.MapDelete("/deleteproduct/{code}", ([FromRoute] string code) =>
+app.MapDelete("/products/{code}", ([FromRoute] string code) =>
 {
     var productSave = ProductRepository.GetBy(code);
     ProductRepository.Remove(productSave);
