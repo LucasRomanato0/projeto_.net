@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ApplicationDbContext>();
+
 var app = builder.Build();
 var configuration = app.Configuration;
 ProductRepository.Init(configuration);
@@ -70,6 +72,7 @@ public static class ProductRepository
 
 public class Product
 {
+    public int Id { get; set; }
     public string Code { get; set; }
     public string Name { get; set; }
 }
