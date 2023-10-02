@@ -49,8 +49,8 @@ app.MapGet("/products/{id}", ([FromRoute] int id, ApplicationDbContext context) 
 app.MapPut("/products/{id}", ([FromRoute] int id, ProductRequestDTO request, ApplicationDbContext context) =>
 {
     var product = context.Products
-    .Include(p => p.Tags)
-    .Where(p => p.Id == id).First();
+        .Include(p => p.Tags)
+        .Where(p => p.Id == id).First();
     var category = context.Categories.Where(c => c.Id == request.CategoryId).First();
 
     product.Code = request.Code;
@@ -71,10 +71,12 @@ app.MapPut("/products/{id}", ([FromRoute] int id, ProductRequestDTO request, App
     return Results.Ok();
 });
 
-app.MapDelete("/products/{code}", ([FromRoute] string code) =>
+app.MapDelete("/products/{id}", ([FromRoute] int id, ApplicationDbContext context) =>
 {
-    var productSave = ProductRepository.GetBy(code);
-    ProductRepository.Remove(productSave);
+    var product = context.Products.Where(p => p.Id == id).First();
+    context.Products.Remove(product);
+
+    context.SaveChanges();
     return Results.Ok();
 });
 
