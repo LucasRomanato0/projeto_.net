@@ -11,7 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\Products\" />
+    <EditorConfigFiles Remove="C:\Users\lucas\Desktop\projeto_.net\IWantApp\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\lucas\Desktop\projeto_.net\IWantApp\.editorconfig" />
   </ItemGroup>
 
 </Project>
