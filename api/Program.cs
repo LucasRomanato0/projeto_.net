@@ -18,6 +18,15 @@ app.MapPost("/products", (ProductRequestDTO request, ApplicationDbContext contex
         Category = category
     };
 
+    if (request.Tags != null)
+    {
+        product.Tags = new List<Tag>();
+        foreach (var item in request.Tags)
+        {
+            product.Tags.Add(new Tag { Name = item });
+        }
+    }
+
     context.Products.Add(product);
     context.SaveChanges();
     return Results.Created($"/products/{product.Id}", product.Id);
